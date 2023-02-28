@@ -3,7 +3,7 @@ using CS10;
 
 Console.WriteLine("Hello, World!");
 
-var dm = new DataMeasurment();
+var dm = new DataMeasurment() { Measurement = 20 };
 
 Point p1 = new() { X = 1, Y = 2, Z = 3, };
 Point p2 = new() { X = 2, Y = 2, Z = 2, };
@@ -17,3 +17,10 @@ Console.WriteLine($"{person2.FirstName} {person2.LastName}");
 
 GlobalUsing globalUsing = new();
 globalUsing.GetSquareRoot();
+
+// Extended property patterns
+ExtendedPropertyPatterns extendedPropertyPatterns = new ExtendedPropertyPatterns();
+double res = extendedPropertyPatterns.SwitchOnExtendedPropertyPatterns(dm);
+Console.WriteLine($"res={res}");
+
+// Lambda expression improvements
